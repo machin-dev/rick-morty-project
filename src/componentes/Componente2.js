@@ -10,13 +10,13 @@ function Componente2(){
     const characterapi= await api.json();    
     setLista(characterapi.results);   
   }
-  const cleanList=()=>{
-    setLista(null);
-  }
+  
     return(
         <div className="container-fluid">
-          <h1>Rick & Morthy API</h1>
-          <button type="button" className="btn btn-primary" onClick={btnclick}>Button</button>
+          <div className="container">
+            <img className="bg-dark w-50" src={require("../img/name.png")} alt="Rick & Morty" />
+          </div>
+          
           <div>
             
             {lista ? (
@@ -26,7 +26,8 @@ function Componente2(){
               </>
             ): (
               <>
-              <h2 className="text-secondary">click para ver listado de personajes</h2>              
+              <button type="button" className="btn btn-primary mt-5 mb-2" onClick={btnclick}>Ver Personajes</button>
+              <h5 className="text-secondary">Haga click en el boton azul para ver el listado</h5>              
               </>
             )}
             

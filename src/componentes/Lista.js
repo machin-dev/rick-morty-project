@@ -6,11 +6,11 @@ export default function Lista(props){
     } 
     return(
         <div className="container-fluid">
-           <h1 className="text-primary">Listado de personajes</h1> 
-           <span className="text-primary text-decoration-underline" onClick={reset}>
-            <button className="btn btn-secondary " href="#">Atras</button>
-            </span>
-           <div className="container-fluid  bg-light">
+           <h3 className="text-light">Listado de personajes</h3> 
+           <span className="text-primary text-decoration-underline " onClick={reset}>
+            <button className="btn btn-secondary m-3" href="#">Atras</button>
+           </span>
+           <div className="container-fluid">
             {console.log(list)}
             {list.map((l,index)=>(
                 
@@ -43,7 +43,7 @@ export default function Lista(props){
                             )
                         }
                         <p className="">Episodes:  
-                             <span class="badge bg-danger">
+                             <span className="badge bg-danger">
                               {l.episode.length}                               
                             </span>
                         </p>
