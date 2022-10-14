@@ -16,6 +16,7 @@ function App() {
           <Route path='/Titulo' element={<Titulo name='Michel' msg='aslkdj alskjdad' />} />
           <Route path='/Componente2' element={<Componente2 />} />  
           <Route path='/Home' element={<Home />}/>        
+          <Route path='/' element={<Home />}/> 
          </Routes>
         </Router>      
           
