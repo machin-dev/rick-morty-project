@@ -1,27 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../estilo/bootstrap.min.css';
 import Lista from "./Lista";
 
 
-function Componente2(){
+function Characters(){
   const [lista, setLista]=useState(null);
   const btnclick= async () =>{
     const api=await fetch("https://rickandmortyapi.com/api/character");
     const characterapi= await api.json();    
-    setLista(characterapi.results);   
-  }
-  
+    setLista(characterapi.results);       
+  }  
     return(
         <div className="container-fluid">
           <div className="container">
             <img className="bg-dark w-50" src={require("../img/name.png")} alt="Rick & Morty" />
           </div>
           
-          <div>
-            
+          <div>            
             {lista ? (
-              <>
-              
+              <>              
               <Lista list={lista} setList={setLista}/>              
               </>
             ): (
@@ -35,4 +32,4 @@ function Componente2(){
          </div>
     );
 }
-export default Componente2
+export default Characters

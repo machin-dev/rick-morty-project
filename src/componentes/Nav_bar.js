@@ -8,8 +8,8 @@ function Nav_bar(){
         <div>
       <nav className="nav justify-content-center  breadcrumb">
         <Link className="breadcrumb-item nav-link active" to='/Home'>Home</Link>
-        <Link className="breadcrumb-item nav-link active" to='/Titulo'>Titulo</Link>
-        <Link className="breadcrumb-item nav-link active" to='/Componente2'>Componente 2</Link>
+        <Link className="breadcrumb-item nav-link active" to='/Details'>Details</Link>
+        <Link className="breadcrumb-item nav-link active" to='/All'>Characters</Link>
       </nav>
      
      </div>
