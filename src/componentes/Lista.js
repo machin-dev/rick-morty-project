@@ -1,17 +1,42 @@
-export default function Lista(props){
-    const {list,setList}=props;   
+import { useState } from "react";
+
+export default function Lista(props){    
+    const {list,setList}=props; 
+    const [filter, setFilter]=useState([]);  
     const reset= ()=>{
         console.log('resetando');
         setList("");
     } 
+
+     const filtrar =(e) =>{
+      // setFilter([]);
+       console.log(e.target.value);
+       list.map((l)=>(      
+        
+         (l.species==e.target.value) ? ( 
+                           
+              setFilter([...filter,l])
+         ):(
+           console.log('--')
+         )     
+        ))
+        console.log(filter)
+     }
+
     return(
-        <div className="container-fluid">
+        <div className="container-fluid text-light">
            <h3 className="text-light">Listado de personajes</h3> 
            <span className="text-primary text-decoration-underline " onClick={reset}>
             <button className="btn btn-secondary m-3" href="#">Atras</button>
            </span>
-           <div className="container-fluid">
-            {console.log(list)}
+           <label className="">Filtrar especie:
+           <select onChange={filtrar}>    
+             <option name='' value=''></option>         
+             <option name='human' value='Human'>Human</option>
+             <option name='allien' value='Alien'>Alien</option>             
+           </select>
+           </label>
+           <div className="container-fluid">            
             {list.map((l,index)=>(
                 
                 <div className="card d-inline-flex m-2 border b-2" max-width={50} key={index}>
