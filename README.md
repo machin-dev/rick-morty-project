@@ -1,4 +1,4 @@
-#View the site at:
+# Published at:
 https://ricknmortyexample.netlify.app/
 
 # Getting Started with Create React App
