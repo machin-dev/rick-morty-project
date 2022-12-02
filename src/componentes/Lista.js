@@ -8,9 +8,8 @@ export default function Lista(props){
         console.log('resetando');
         setList("");
         SetFilter(null);
-    }   
-     
-    useEffect(()=>(console.log(filter)))
+    }        
+    
     return(
         <div className="container-fluid text-light">
            <h3 className="text-light">Listado de personajes</h3> 

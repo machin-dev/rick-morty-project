@@ -1,7 +1,5 @@
 import './App.css';
 import './estilo/bootstrap.min.css';
-import Titulo from './componentes/Details';
-import Componente2 from './componentes/Characters';
 import Home from './Home';
 import { BrowserRouter as Router , Routes, Route, Link } from 'react-router-dom';
 import Nav_bar from './componentes/Nav_bar';
